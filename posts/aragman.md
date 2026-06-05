@@ -22,7 +22,7 @@ Here's a list of funny little anagrams my friends have found for their names, oc
 
 ### Algorithms and LLMs
 
-The classic way to solve these anagram problems is using some kind of [Counter](https://docs.python.org/3/library/collections.html#collections.Counter)-like structure. However, I wanted to get all substring anagrams. This is basically a permutation problem, and calculating permutations is really slow, O(n!) time. We could use caching, but why do that when we can just write a good algorithm instead? I take the word lists and create word maps where the key is the sorted characters, and the value is an array of all the words that correspond to the word sorted. Then, I just sort the input and write a combination algorithm O(2^n) and return those.
+The classic way to solve these anagram problems is using some kind of [Counter](https://docs.python.org/3/library/collections.html#collections.Counter)-like structure. However, I wanted to get all substring anagrams. This is basically a permutation problem, and calculating permutations is really slow, O(n!) time. We could use caching, but why do that when we can just write a good algorithm instead? I take the word lists and create word maps where the key is the sorted characters, and the value is an array of all the words that correspond to the word sorted. Then, I just sort the input and use a combination algorithm O(2^n).
 
 ### Frameworks, Languages
 
